@@ -95,4 +95,5 @@ Public Class MenuStripExam
             RichTextBox1.ForeColor = dlg.Color
         End If
     End Sub
+
 End Class

@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MenuStripExam
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MenuStripExam
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FILEToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,8 +57,9 @@ Partial Class MenuStripExam
         '
         Me.FILEToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NEWToolStripMenuItem, Me.OPENToolStripMenuItem, Me.SAVEToolStripMenuItem, Me.ToolStripMenuItem1, Me.EXITToolStripMenuItem})
         Me.FILEToolStripMenuItem.Name = "FILEToolStripMenuItem"
+        Me.FILEToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.FILEToolStripMenuItem.Size = New System.Drawing.Size(40, 20)
-        Me.FILEToolStripMenuItem.Text = "FILE"
+        Me.FILEToolStripMenuItem.Text = "&FILE"
         '
         'NEWToolStripMenuItem
         '
@@ -96,8 +97,9 @@ Partial Class MenuStripExam
         '
         Me.EDITToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UNDOToolStripMenuItem, Me.REDOToolStripMenuItem, Me.CUTToolStripMenuItem, Me.COPYToolStripMenuItem, Me.PASTEToolStripMenuItem})
         Me.EDITToolStripMenuItem.Name = "EDITToolStripMenuItem"
+        Me.EDITToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
         Me.EDITToolStripMenuItem.Size = New System.Drawing.Size(42, 20)
-        Me.EDITToolStripMenuItem.Text = "EDIT"
+        Me.EDITToolStripMenuItem.Text = "&EDIT"
         '
         'UNDOToolStripMenuItem
         '
