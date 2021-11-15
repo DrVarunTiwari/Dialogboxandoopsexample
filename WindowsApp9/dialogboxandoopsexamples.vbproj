@@ -99,6 +99,12 @@
     <Compile Include="constructorandinheritance.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="MenuStripExam.Designer.vb">
+      <DependentUpon>MenuStripExam.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MenuStripExam.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="overloading.Designer.vb">
       <DependentUpon>overloading.vb</DependentUpon>
     </Compile>
@@ -152,6 +158,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="constructor.resx">
       <DependentUpon>constructor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuStripExam.resx">
+      <DependentUpon>MenuStripExam.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="overloading.resx">
       <DependentUpon>overloading.vb</DependentUpon>

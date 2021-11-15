@@ -1,18 +1,29 @@
 ﻿Imports System.IO
-Public Class dialogcontrol
+Public Class MenuStripExam
     Private FileName As String
     Dim sw As StreamWriter
-    Private Sub setFont()
-        Try
-            With FontDialog1
-                RichTextBox1.Font = .Font
-
-            End With
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+    Private Sub NEWToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NEWToolStripMenuItem.Click
+        RichTextBox1.Clear()
     End Sub
-    Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
+    Private Sub EXITToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EXITToolStripMenuItem.Click
+        End
+    End Sub
+    Private Sub UNDOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UNDOToolStripMenuItem.Click
+        RichTextBox1.Undo()
+    End Sub
+    Private Sub REDOToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles REDOToolStripMenuItem.Click
+        RichTextBox1.Redo()
+    End Sub
+    Private Sub CUTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CUTToolStripMenuItem.Click
+        RichTextBox1.Cut()
+    End Sub
+    Private Sub COPYToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles COPYToolStripMenuItem.Click
+        RichTextBox1.Copy()
+    End Sub
+    Private Sub PASTEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PASTEToolStripMenuItem.Click
+        RichTextBox1.Paste()
+    End Sub
+    Private Sub OPENToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OPENToolStripMenuItem.Click
         Dim open As New OpenFileDialog
         With open
             .Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*"
@@ -31,8 +42,7 @@ Public Class dialogcontrol
         open.Dispose()
         open = Nothing
     End Sub
-
-    Private Sub SaveToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SaveToolStripMenuItem.Click
+    Private Sub SAVEToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SAVEToolStripMenuItem.Click
         Try
             With SaveFileDialog1
                 .FileName = FileName
@@ -51,8 +61,17 @@ Public Class dialogcontrol
             End If
         End Try
     End Sub
+    Private Sub setFont()
+        Try
+            With FontDialog1
+                RichTextBox1.Font = .Font
 
-    Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+    End Sub
+    Private Sub FONTToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FONTToolStripMenuItem.Click
         Try
             With FontDialog1
                 .Font = RichTextBox1.Font
@@ -66,7 +85,7 @@ Public Class dialogcontrol
         End Try
     End Sub
 
-    Private Sub ColorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ColorToolStripMenuItem.Click
+    Private Sub COLORToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles COLORToolStripMenuItem.Click
         Dim dlg As New ColorDialog
         dlg.ShowDialog()
         If dlg.ShowDialog = Windows.Forms.DialogResult.OK Then
@@ -75,14 +94,5 @@ Public Class dialogcontrol
             MsgBox(str)
             RichTextBox1.ForeColor = dlg.Color
         End If
-
-    End Sub
-
-    Private Sub SaveFileDialog1_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles SaveFileDialog1.FileOk
-
-    End Sub
-
-    Private Sub dialogcontrol_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class

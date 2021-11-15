@@ -1,8 +1,6 @@
 ﻿Public Class constructorandinheritance
-
     Public Class Printer
         Public a, b As Integer
-
         Public Function add() As Integer
             Return a + b
         End Function
